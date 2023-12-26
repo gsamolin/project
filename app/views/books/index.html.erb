@@ -1,0 +1,53 @@
+<body>
+<div class = "container">
+  <div class = 'row'>
+      <div class = 'col-6'>
+        <%= search_form_for @q do |f| %>
+        <%= label_tag ("Название содержит:") %>
+        <%= f.text_field :name_cont, class: 'form-control' %> </br>
+        <%= label_tag ("Язык:") %> 
+        <%= f.search_field :language_eq, class: 'form-control' %> </br>
+      </div>
+
+      <div class = "col-6"
+        <%= label_tag ("Жанр:") %> 
+        <%= f.search_field :genre_eq, class: 'form-control' %> </br>
+        <%= label_tag ("Автор:") %> 
+        <%= f.search_field :author_cont, class: 'form-control' %> </br>
+      </div>
+  </div>
+  <div class = 'row'>
+  <div class = 'col-6', align = "center" >
+  <%= f.submit class: 'btn btn-primary', style: 'width: 100px, margin: auto'%>
+</div>
+      <div class = 'col-6', align = "center">
+        <%= link_to "Очистить", request.path, class: "btn btn-default", style: "border: 2px solid #0d6efd"%> </br>
+      </div>
+      <% end %>
+  </div>
+</div>
+<table class = "booklist">
+  <thead>
+    <tr>
+      <th><%= sort_link(@q, :name, "Название", default_order: :asc) %></th>
+      <th><%= sort_link(@q, :author, "Автор", default_order: :asc) %></th>
+      <th><%= sort_link(@q, :genre, "Жанр", default_order: :asc) %></th>
+      <th><%= sort_link(@q, :language, "Язык", default_order: :asc) %></th>
+      <th><%= sort_link(@q, :description, "Email", default_order: :asc) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.name %></td>
+        <td><%= book.author %></td>
+        <td><%= book.genre %></td>
+        <td><%= book.language %></td>
+        <td><%= book.author_email %></td>
+        <td><%= link_to "#{t('show_button')}", book %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<body>

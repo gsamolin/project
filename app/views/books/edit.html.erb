@@ -1,0 +1,10 @@
+<h1><%="#{t('edit_book')}"%></h1>
+
+<%= render "form", book: @book %>
+
+<br>
+
+<div style = "margin: 20px", align = "center">
+  <%= link_to "Читать публикацию", @book , class:"btn btn-outline-primary"%> 
+  <%= link_to "Назад к публикациям", books_path, class:"btn btn-outline-primary"%>
+</div>

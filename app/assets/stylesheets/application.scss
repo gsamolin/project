@@ -1,0 +1,127 @@
+@import "bootstrap";
+
+body 
+{
+    padding-bottom: 80px;
+}
+.container
+{
+    padding: 10px;
+}
+
+.login {
+    text-align: center;
+    div 
+    {
+        margin: 20px;
+    }
+}
+.sitename
+{
+    vertical-align: middle;
+    margin: 10px;
+    text-align: center;
+    color: rgb(24, 80, 185);
+}
+
+h1, h2, h3
+{
+    vertical-align: middle;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.booklist 
+{
+    position:relative;
+    align-content: center;
+    padding-top: 5px;
+    margin: auto;
+    align-items:center;
+
+    td
+    {
+
+        margin: 10px;
+        
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    };
+
+    th 
+    {
+        margin: auto;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    };
+}
+
+.exit_button
+{
+    padding: 5px;
+}
+
+.my-primary {
+    background-color:rgb(24, 80, 185);
+    color: white;
+    .nav-link
+    {
+        color: white;
+    }
+    }
+.edit_create
+{
+    text-align: center;
+}
+
+.publics
+{
+    width: 800px;
+    position: relative;
+    display: grid;
+    margin: auto;
+    .container
+    {
+        align-self: center;
+        justify-self: center;
+        border: 2px solid rgb(24, 80, 185);
+        background-color: #e0e9fb;
+        border-radius: 12px;
+        margin: 10px;
+        padding: 5px;
+        .row
+        {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin: 5px;
+        }
+        .col
+            {
+                width: 50px;
+                align-self: center;
+                text-align:center;
+            }
+    }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */

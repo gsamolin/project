@@ -1,0 +1,20 @@
+<h3>Мои публикации</h3>
+
+<table class = "booklist">
+<thead>
+    <tr>
+      <th><%="#{t('book_name')}"%></th>
+      <th><%="#{t('book_genre')}"%></th>
+      <th><%="#{t('book_language')}"%></th>
+    </tr>
+  </thead>
+  <tbody style = "background-color: #e0e9fb;">
+    <% @mybooks.each do |book| %>
+      <tr style = "border: 2px solid rgb(24, 80, 185);", onclick="location.href = 'http://localhost:3000/books/<%= book.id %>';">
+        <td><%= book.name %></td>
+        <td><%= book.genre %></td>
+        <td><%= book.language %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

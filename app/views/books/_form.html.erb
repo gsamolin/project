@@ -1,0 +1,61 @@
+<%= form_with(model: book) do |form| %>
+  <% if book.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+        <% book.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div  class = "edit_create">
+  <div class = "row">
+    <div class = "col">
+      <%= form.label :genre, t('book_genre'), style: "display: block" %>
+      <%= form.text_field :genre %>
+    </div>
+    <div class = "col">
+      <%= form.label :name, t('book_name'), style: "display: block" %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class = "col">
+      <%= form.label :language, t('book_language'), style: "display: block" %>
+      <%= form.text_field :language%>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col">
+      <%= form.label :author, t('book_author'), style: "display: block" %>
+      <%= form.text_field :author, value: current_user.name%>
+    </div>
+
+    <div class = "col">
+      <%= form.label :author_email, t('book_author_email'), style: "display: block" %>
+      <%= form.text_field :author_email, value: current_user.email%>
+    </div>
+
+    <div class = "col">
+      <%= form.label :user_id, t('book_author_id'), style: "display: block" %>
+      <%= form.text_field :user_id, value: current_user.id%>
+    </div>
+
+  <div class = "row", style = "padding-top:10px">
+  <div class = "col">
+  <%= form.label :description, t('book_description'), style: "display: block" %>
+  <%= form.text_area :description, cols: 100, rows: 7%>
+</div>
+
+
+    <div class = "col", style = "padding-bottom:10px; padding-top:10px">
+      <%= form.label :content, t('book_content'), style: "display: block" %>
+    <%= form.text_area :content, cols: 100, rows: 20%>
+    </div>
+    </div>
+<div>
+    <%= form.submit "#{t('submit')}"%>
+  </div>
+  </div>
+<% end %>
