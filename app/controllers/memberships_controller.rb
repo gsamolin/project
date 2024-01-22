@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# asdasdas
 class MembershipsController < ApplicationController
   before_action :set_membership, only: %i[show edit update destroy]
 

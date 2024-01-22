@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# adasdasr
 class SubscriptionsController < ApplicationController
   before_action :set_subscription, only: %i[show edit update destroy]
 

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# asdadsa
 class LibraryController < ApplicationController
   def showall
     @mysubs = Subscription.where(user_id: current_user.id)

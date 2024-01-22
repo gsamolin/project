@@ -1,0 +1,9 @@
+# .rubocop.yml
+
+# Ваша общая конфигурация RuboCop
+
+# Исключения для определенных ошибок
+Metrics/MethodLength:
+  Exclude:
+    - '/Users/grigorii/Desktop/проект/app/controllers/library_controller.rb'
+    - '/Users/grigorii/Desktop/проект/app/controllers/publishers_controller.rb'

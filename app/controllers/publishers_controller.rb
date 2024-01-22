@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# asdads
 class PublishersController < ApplicationController
   before_action :set_publisher, only: %i[show edit update destroy]
 

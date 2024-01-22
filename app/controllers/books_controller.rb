@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# asdadsa
 class BooksController < ApplicationController
   before_action :set_book, only: %i[show edit update destroy], except: [:index]
   # GET /books or /books.json
